@@ -4,4 +4,9 @@
   justify-content: space-around;
   margin: 20px;
   padding: 20px;
+  height: 90vh;
+}
+
+.editor {
+  height: 100%;
 }
