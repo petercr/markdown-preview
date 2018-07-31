@@ -5,9 +5,7 @@ import marked from "marked";
 class App extends Component {
   constructor(props) {
     super(props);
-    this.mainHtml = [
-      <div></div>
-    ];
+    this.mainHtml = ``;
     this.state = {
       editorText: "Editor",
       previewText: this.mainHtml
@@ -20,9 +18,10 @@ class App extends Component {
     this.setState({ editorText: _text_ });
     const markdown = marked(_text_);
     // this.mainHtml.push(markdown);
-    this.setState({ previewText: markdown   });
+    this.setState({ previewText: markdown  });
+    // eslint-disable-next-line
     const preview = document.querySelector("#preview");
-    console.dir(this.mainHtml);
+    console.dir(markdown);
     // preview.innerHTML = preview;
   }
 
@@ -34,6 +33,14 @@ class App extends Component {
     test = marked(`**Wow** _I can't believe it_`);
   }
 
+  // function Preview(props) {
+  //   return (
+     
+  //   );
+  // }
+
+  
+
   render() {
     return (
       <div className="App">
@@ -42,13 +49,13 @@ class App extends Component {
             name=""
             id="editor"
             cols=""
-            rows=""
+            rows="20"
             onChange={this.updateEditor}
           >
             {this.state.editorText}
           </textarea>
         </div>
-        <div id="preview">{this.state.previewText}</div>
+        <div className="preview" dangerouslySetInnerHTML={{__html: this.state.previewText}}></div> 
       </div>
     );
   }
