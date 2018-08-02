@@ -5,16 +5,15 @@ import marked from "marked";
 class App extends Component {
   constructor(props) {
     super(props);
-    this.mainHtml = `
-    # Try this
-    ## Cool Editor
-    A project from [Free Code Camp](https://learn.freecodecamp.org)
-    You can use code in-line console.log("")
-    Or Code Blocks
-    * An image or something
-    **Woah bold text**
+    this.mainHtml = 
+    "# Try this " +
+    '## Cool Editor' +
+    "A project from [Free Code Camp](https://learn.freecodecamp.org)" +
+    "You can use code in-line `console.log('')`" +
+    "Or Code Blocks" +
+    "* An image or something" +
+    "**Woah bold text**";
     
-    `;
     this.state = {
       editorText: this.mainHtml,
       previewText: null
@@ -29,7 +28,7 @@ class App extends Component {
     
     // parse the markdown and update previewText
     const markdown = marked(_text_);
-    this.setState({ previewText: markdown  });
+    this.setState({ previewText: markdown, mainHtml: markdown  });
     // eslint-disable-next-line
     console.dir(markdown);
   }
