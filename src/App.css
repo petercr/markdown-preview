@@ -10,3 +10,8 @@
 .editor {
   height: 100%;
 }
+
+code {
+  background: #000000;
+  color: rgb(18, 186, 236);
+}
