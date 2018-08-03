@@ -5,13 +5,13 @@ import marked from "marked";
 class App extends Component {
   constructor(props) {
     super(props);
-    this.mainHtml = 
-    "# Try this " +
-    '## Cool Editor' +
-    "A project from [Free Code Camp](https://learn.freecodecamp.org)" +
-    "You can use code in-line `console.log('')`" +
-    "Or Code Blocks" +
-    "* An image or something" +
+    this.mainHtml =
+    "# Try this \n" +
+    '## Cool Editor \n' +
+    "A project from [Free Code Camp](https://learn.freecodecamp.org) \n" +
+    "You can use code in-line `console.log('')` \n" +
+    "Or Code Blocks \n" +
+    "* An image or something \n\n" +
     "**Woah bold text**";
     
     this.state = {
@@ -36,19 +36,12 @@ class App extends Component {
   componentDidMount() {
     this.updateEditor();
     // var to hold marked.js file
-    let test = marked("This is **markdown** _text_ ");
+    let test = marked(document.querySelector("#editor").value);
     // test = document.querySelector('#editor').innerText;
     console.log(test);
     test = marked(`**Wow** _I can't believe it_`);
   }
 
-  // function Preview(props) {
-  //   return (
-     
-  //   );
-  // }
-
-  
 
   render() {
     return (
