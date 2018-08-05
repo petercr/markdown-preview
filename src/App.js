@@ -49,8 +49,6 @@ class App extends Component {
           <textarea
             name=""
             id="editor"
-            cols=""
-            rows="20"
             onChange={this.updateEditor}
           >
             {this.state.editorText}
