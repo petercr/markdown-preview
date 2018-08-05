@@ -12,7 +12,8 @@ class App extends Component {
       "You can use code in-line `console.log('')` \n" +
       "Or Code Blocks \n" +
       "* An image or something \n\n" +
-      "**Woah bold text**";
+      "**Woah bold text** \n\n" +
+      "> A deep quote \n\n";
 
     this.state = {
       editorText: this.mainHtml,
