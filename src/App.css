@@ -1,3 +1,4 @@
+/* Styling for main .App container */
 .App {
   display: flex;
   flex-direction: row;
@@ -5,13 +6,34 @@
   margin: 20px;
   padding: 20px;
   height: 90vh;
+  width: 100vw;
 }
 
-.editor {
-  height: 100%;
-}
-
+/* Styling for Global Elements */
 code {
   background: #000000;
   color: rgb(18, 186, 236);
 }
+
+blockquote {
+  background: #bbb8b8;
+  color: red;
+}
+
+/* Styling by class */
+.preview {
+  width: 45%;
+}
+
+.editor {
+  width: 45%;
+}
+
+/* The textarea  */
+#editor {
+  height: 90%;
+  width: 100%;
+  border: 5px solid #000000;
+  font-size: 16px;
+}
+
