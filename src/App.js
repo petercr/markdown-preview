@@ -35,12 +35,12 @@ class App extends Component {
   }
 
   componentDidMount() {
+    // call updateEditor() to parse editor markdown
     this.updateEditor();
-    // var to hold marked.js file
+    
+    // get #editor text, parse it, and log it
     let test = marked(document.querySelector("#editor").value);
-    // test = document.querySelector('#editor').innerText;
     console.log(test);
-    test = marked(`**Wow** _I can't believe it_`);
   }
 
   render() {
