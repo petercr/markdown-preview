@@ -47,6 +47,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="editor">
+          <h1 className="top">Enter Markdown Here</h1>
           <textarea
             name=""
             id="editor"
@@ -55,10 +56,14 @@ class App extends Component {
             {this.state.editorText}
           </textarea>
         </div>
-        <div
-          className="preview"
-          dangerouslySetInnerHTML={{ __html: this.state.previewText }}
-        />
+        <div id="preview">
+        <h1 className="top" >See Preview Here</h1>
+        <div className="preview"
+          dangerouslySetInnerHTML={{ __html: this.state.previewText }} />
+        
+        </div>
+          
+        
       </div>
     );
   }
