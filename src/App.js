@@ -13,7 +13,8 @@ class App extends Component {
       "Or Code Blocks \n" +
       "* An image or something \n\n" +
       "**Woah bold text** \n\n" +
-      "> A deep quote \n\n";
+      "> A deep quote \n\n" +
+      "![React Logo](https://cdn.freebiesupply.com/logos/large/2x/react-1-logo-png-transparent.png)";
 
     this.state = {
       editorText: this.mainHtml,
@@ -37,7 +38,7 @@ class App extends Component {
   componentDidMount() {
     // call updateEditor() to parse editor markdown
     this.updateEditor();
-    
+
     // get #editor text, parse it, and log it
     let test = marked(document.querySelector("#editor").value);
     console.log(test);
@@ -48,22 +49,17 @@ class App extends Component {
       <div className="App">
         <div className="editor">
           <h1 className="top">Enter Markdown Here</h1>
-          <textarea
-            name=""
-            id="editor"
-            onChange={this.updateEditor}
-          >
+          <textarea name="" id="editor" onChange={this.updateEditor}>
             {this.state.editorText}
           </textarea>
         </div>
-        <div id="preview">
-        <h1 className="top" >See Preview Here</h1>
-        <div className="preview"
-          dangerouslySetInnerHTML={{ __html: this.state.previewText }} />
-        
+        <div className="preview">
+          <h1 className="top">See Preview Here</h1>
+          <div
+            id="preview"
+            dangerouslySetInnerHTML={{ __html: this.state.previewText }}
+          />
         </div>
-          
-        
       </div>
     );
   }
