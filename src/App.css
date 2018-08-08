@@ -19,15 +19,16 @@ blockquote {
 }
 
 /* Styling by class */
-#preview {
-  width: 45%;
+.top {
+  width: 100%;
+  text-align: center;
 }
 
 .editor {
   width: 45%;
 }
 
-/* The textarea  */
+/* Styling by id  */
 #editor {
   height: 90%;
   width: 100%;
@@ -36,8 +37,6 @@ blockquote {
   padding: 5px;
 }
 
-.top {
-  width: 100%;
-  text-align: center;
+#preview {
+  width: 45%;
 }
-
