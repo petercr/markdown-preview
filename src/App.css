@@ -18,6 +18,11 @@ blockquote {
   color: red;
 }
 
+img {
+  height: 25%;
+  width: 25%;
+}
+
 /* Styling by class */
 .top {
   width: 100%;
@@ -25,6 +30,10 @@ blockquote {
 }
 
 .editor {
+  width: 45%;
+}
+
+.preview {
   width: 45%;
 }
 
@@ -37,6 +46,6 @@ blockquote {
   padding: 5px;
 }
 
-#preview {
+/* #preview {
   width: 45%;
-}
+} */
