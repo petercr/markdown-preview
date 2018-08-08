@@ -49,7 +49,7 @@ class App extends Component {
       <div className="App">
         <div className="editor">
           <h1 className="top">Enter Markdown Here</h1>
-          <textarea name="" id="editor" onChange={this.updateEditor}>
+          <textarea name="" id="editor" onInput={this.updateEditor}>
             {this.state.editorText}
           </textarea>
         </div>
