@@ -14,7 +14,10 @@ class App extends Component {
       "* An image or something \n\n" +
       "**Woah bold text** \n\n" +
       "> A deep quote \n\n" +
-      "![React Logo](https://cdn.freebiesupply.com/logos/large/2x/react-1-logo-png-transparent.png)";
+      "![React Logo](https://cdn.freebiesupply.com/logos/large/2x/react-1-logo-png-transparent.png) \n" +
+      "```" +
+      "const done = true; \n" +
+      "``` \n";
 
     this.state = {
       editorText: this.mainHtml,
