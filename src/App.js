@@ -5,19 +5,21 @@ import marked from "marked";
 class App extends Component {
   constructor(props) {
     super(props);
-    this.mainHtml =
-      "# Try this \n" +
-      "## Cool Editor \n" +
-      "A project from [Free Code Camp](https://learn.freecodecamp.org) \n" +
-      "You can use code in-line `console.log('')` \n" +
-      "Or Code Blocks \n" +
-      "* An image or something \n\n" +
-      "**Woah bold text** \n\n" +
-      "> A deep quote \n\n" +
-      "![React Logo](https://cdn.freebiesupply.com/logos/large/2x/react-1-logo-png-transparent.png) \n" +
-      "```" +
-      "const done = true; \n" +
-      "``` \n";
+    this.mainHtml = 
+      `# Try this 
+      ## Cool Editor 
+      A project from [Free Code Camp](https://learn.freecodecamp.org) 
+      You can use code in-line \`console.log("")\` 
+      Or Code Blocks 
+      * An image or something 
+      **Woah bold text** 
+      > A deep quote 
+
+      ![React Logo](https://cdn.freebiesupply.com/logos/large/2x/react-1-logo-png-transparent.png) 
+      \`\`\` 
+      const done = true; 
+      \`\`\` 
+      `
 
     this.state = {
       editorText: this.mainHtml,
@@ -39,6 +41,9 @@ class App extends Component {
   }
 
   componentDidMount() {
+    marked.setOptions({
+      breaks: true,
+    });
     // call updateEditor() to parse editor markdown
     this.updateEditor();
 
