@@ -5,6 +5,8 @@ import marked from "marked";
 class App extends Component {
   constructor(props) {
     super(props);
+
+    // the pre-written markdown to load
     this.mainHtml = 
       `# Try this 
 ## Cool Editor 
@@ -47,9 +49,6 @@ const done = true;
     // call updateEditor() to parse editor markdown
     this.updateEditor();
 
-    // get #editor text, parse it, and log it
-    // let test = marked(document.querySelector("#editor").value);
-    // console.log(test);
   }
 
   render() {
