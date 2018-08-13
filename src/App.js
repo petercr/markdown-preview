@@ -7,18 +7,18 @@ class App extends Component {
     super(props);
     this.mainHtml = 
       `# Try this 
-      ## Cool Editor 
-      A project from [Free Code Camp](https://learn.freecodecamp.org) 
-      You can use code in-line \`console.log("")\` 
-      Or Code Blocks 
-      * An image or something 
-      **Woah bold text** 
-      > A deep quote 
+## Cool Editor 
+A project from [Free Code Camp](https://learn.freecodecamp.org) 
+You can use code in-line \`console.log("")\` 
+Or Code Blocks 
+* An image or something 
+**Woah bold text** 
+> A deep quote 
 
-      ![React Logo](https://cdn.freebiesupply.com/logos/large/2x/react-1-logo-png-transparent.png) 
-      \`\`\` 
-      const done = true; 
-      \`\`\` 
+![React Logo](https://cdn.freebiesupply.com/logos/large/2x/react-1-logo-png-transparent.png) 
+\`\`\` 
+const done = true; 
+\`\`\` 
       `
 
     this.state = {
@@ -48,8 +48,8 @@ class App extends Component {
     this.updateEditor();
 
     // get #editor text, parse it, and log it
-    let test = marked(document.querySelector("#editor").value);
-    console.log(test);
+    // let test = marked(document.querySelector("#editor").value);
+    // console.log(test);
   }
 
   render() {
