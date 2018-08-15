@@ -8,8 +8,8 @@ class App extends Component {
 
     // the pre-written markdown to load
     this.mainHtml = 
-      `# Try this 
-## Cool Editor 
+    `# Try this
+## Cool Editor
 A project from [Free Code Camp](https://learn.freecodecamp.org) 
 You can use code in-line \`console.log("")\` 
 Or Code Blocks 
@@ -20,8 +20,7 @@ Or Code Blocks
 ![React Logo](https://cdn.freebiesupply.com/logos/large/2x/react-1-logo-png-transparent.png) 
 \`\`\` 
 const done = true; 
-\`\`\` 
-      `
+\`\`\``
 
     this.state = {
       editorText: this.mainHtml,
